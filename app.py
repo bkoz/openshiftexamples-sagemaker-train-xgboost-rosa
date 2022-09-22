@@ -40,7 +40,7 @@ async def root():
 
 @app.get("/healthz")
 async def root():
-    return {"message": "Everything's shiny, Cap'n. Not to fret."}
+    return {"message": "BK: Everything's shiny, Cap'n. Not to fret."}
 
 @app.post("/predict", response_model=List)
 async def predict_post(datas: List[InputFeatures]):
