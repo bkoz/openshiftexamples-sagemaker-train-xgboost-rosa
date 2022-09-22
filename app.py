@@ -50,7 +50,7 @@ async def predict_post(datas: List[InputFeatures]):
     print(arrayofdata)
     print("Printing dmat...")
     dmat = xgb.DMatrix(arrayofdata)
-    print(f'dmat: {dmat}')
+    print(f'dmat.num_col: {dmat.num_col()}')
     try:
         return model.predict(dmat).tolist()
     except Exception as e:
